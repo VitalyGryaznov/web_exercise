@@ -1,0 +1,6 @@
+{
+  "RUN_LOCALLY" : true,
+  "BROWSER_NAME" : "Chrome",
+  "BROWSER_VERSION" : "",
+  "CHROMEDRIVER_PATH" : "/Users/vitalygryaznov/chalange/web_exercise/src/test/java/drivers/chromedriver"
+}

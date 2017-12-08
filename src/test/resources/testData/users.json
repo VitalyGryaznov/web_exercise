@@ -1,0 +1,13 @@
+{
+  "MEMBER_USER": {
+    "NAME": "testhr",
+    "EMAIL": "testhr@mailinator.com",
+    "PASSWORD": "testhr"
+
+  },
+  "ADMIN_USER": {
+    "NAME": "admin",
+    "EMAIL": "admin@admin.com",
+    "PASSWORD":"admin"
+  }
+}
