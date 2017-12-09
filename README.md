@@ -31,8 +31,10 @@ To run test locally:
 - [target/cucumber.json], [target/cucumber-results.xml] -for jenkins plugin
 - [target/cucumber-pretty.txt] logs
 
-# What wasn't done because of the time frame
+# What wasn done because of the time frame
 - Swiping left is hardcoded in page object. it should be placed in utils, helpers or common steps
+- Implemented verification that card is the 3rd, but it's better to use conditional wait in this case. test passed 5/5 but it could fail in bad performance conditions
+- Used only dots on the card to verify it's the third. It's better to add assertion that it was the third before screen resizing
 - Very simple configuration
 - All test verified only on chrome
 - Some duplicated code (openItWithDirectLink method for example)
