@@ -2,7 +2,6 @@ package utils;
 
 import com.google.gson.Gson;
 import models.ConfigModel;
-import models.UserModel;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -40,13 +39,6 @@ public class DataHelper {
             return null;
         }
     }
-
-
-    public static UserModel getUserData(String userProfileName) {
-
-        return (UserModel) getDataByItemName(TEST_DATA_FOLDER + USERS_DATA_FILE, UserModel.class, userProfileName);
-    }
-
 
     public static ConfigModel getConfigData(String fileName) {
 

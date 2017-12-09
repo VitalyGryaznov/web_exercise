@@ -13,8 +13,6 @@ public class WikipediaArticlePage extends BasePage {
     @FindBy(id = "bodyContent")
     private WebElement contentFragment;
 
-
-
     public WikipediaArticlePage(SetupDriverHook setupDriverHook) {
         super(setupDriverHook);
     }

@@ -8,7 +8,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -46,27 +45,21 @@ public class SetupDriverHook {
                     driver = new InternetExplorerDriver();
                     break;
                 default:
-                    if (!configData.getCHROMEDRIVER_PATH().equals("") ) {
+                    if (!configData.getCHROMEDRIVER_PATH().equals("")) {
                         System.setProperty("webdriver.chrome.driver", configData.getCHROMEDRIVER_PATH());
                     }
                     driver = new ChromeDriver();
-
             }
         } else {
-
             DesiredCapabilities capability = new DesiredCapabilities();
             driver = new RemoteWebDriver(new URL("node url"), capability);
-
         }
-
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-
     }
 
     @After
     public void afterRunningScenario(Scenario scenario) {
-
         try {
             if (scenario.isFailed()) {
                 byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
@@ -81,22 +74,18 @@ public class SetupDriverHook {
     }
 
     public WebDriver getDriver() {
-
         return driver;
     }
 
     public Scenario getScenario() {
-
         return this.scenario;
     }
 
     public void setScenario(Scenario scenario) {
-
         this.scenario = scenario;
     }
 
     public ConfigModel getConfigData() {
-
         return configData;
     }
 }

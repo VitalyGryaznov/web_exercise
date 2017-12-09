@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import pageObjects.BasePage;
-import pageObjects.wikipediaPages.WikipediaArticlePage;
 
 public class TravelexHomePage extends BasePage {
 
@@ -20,10 +19,8 @@ public class TravelexHomePage extends BasePage {
     @FindBy(css = ".hiw__header")
     private WebElement howItWorksHeader;
 
-
-
     private WebElement getCurentlyVisibleCartDotNumber(int number) {
-       return setupDriverHook.getDriver().findElement(By.xpath(String.format("//ul[@class='slick-dots']/li[%d]", number)));
+        return setupDriverHook.getDriver().findElement(By.xpath(String.format("//ul[@class='slick-dots']/li[%d]", number)));
     }
 
     public TravelexHomePage(SetupDriverHook setupDriverHook) {
@@ -41,18 +38,8 @@ public class TravelexHomePage extends BasePage {
     public void swipeLeftCardsSlider(int numberOfSwipes) {
         WebDriver driver = setupDriverHook.getDriver();
         Dimension size = driver.manage().window().getSize();
-
-
-//        int currentWidth  =setupDriverHook.getDriver().manage().window().getSize().getHeight();
-//        int startY = element1.getLocation().getY() + (element1.getSize().getHeight() / 2);
-
         Actions builder = new Actions(driver);
-        builder.clickAndHold(homeCards).moveByOffset(-homeCards.getSize().getWidth()/2, 0).release().perform();
-
-
-
-
-
+        builder.clickAndHold(homeCards).moveByOffset(-homeCards.getSize().getWidth() / 2, 0).release().perform();
     }
 
     public TravelexHomePage openItWithDirectLink() {
