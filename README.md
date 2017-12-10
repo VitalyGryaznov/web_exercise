@@ -18,8 +18,8 @@ Framework structure:
 Requirements:
 Maven installed
 
-To run:
-this version configured only for running tests locally.
+This version configured only for running tests locally.
+
 To run test locally:
 - Go to https://sites.google.com/a/chromium.org/chromedriver/downloads and download chrome driver that matches your OS and chrome version
 - Open src/test/resources/configs/localConfig.json and pust path to your chromedriver instead of "/Users/vitalygryaznov/chalange/web_exercise/src/test/java/drivers/chromedriver"
