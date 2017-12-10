@@ -11,5 +11,5 @@ Feature: Wifdsfsgkipedia Search
     Then I see that card displayed is indeed the <expectedNumberOfCurrentlyDisplayedCard> item
 
     Examples:
-      | width| numberOfSwipesToDo | expectedNumberOfCurrentlyDisplayedCard |
-      | 500 | 2              | 3                                          |
+      | width | numberOfSwipesToDo | expectedNumberOfCurrentlyDisplayedCard |
+      | 500   | 2                  | 3                                      |
