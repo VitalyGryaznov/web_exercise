@@ -17,6 +17,7 @@ Framework structure:
 # Setup and run
 Requirements:
 Maven installed
+
 To run:
 this version configured only for running tests locally.
 To run test locally:
